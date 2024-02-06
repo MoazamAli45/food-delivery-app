@@ -1,0 +1,32 @@
+import {defineType} from 'sanity'
+
+export default defineType({
+  name: 'featured',
+  title: 'Featured',
+  type: 'document',
+  fields: [
+    {
+      name: 'name',
+      type: 'string',
+      title: 'Name',
+      validation: (rule) => rule.required(),
+    },
+    {
+      name: 'description',
+      type: 'text',
+      title: 'Description',
+      validation: (rule) => rule.max(200),
+    },
+    {
+      name: 'restaurants',
+      type: 'array',
+      title: 'Restaurants',
+      of: [
+        {
+          type: 'reference',
+          to: [{type: 'restaurant'}],
+        },
+      ],
+    },
+  ],
+})
