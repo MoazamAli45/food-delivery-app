@@ -13,5 +13,5 @@ This is a React Native app for a food delivery service. It consists of a fronten
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/MoazamAli45/food-delivery-app)https://github.com/MoazamAli45/food-delivery-app
    ```
